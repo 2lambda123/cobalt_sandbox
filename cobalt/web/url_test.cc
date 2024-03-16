@@ -119,8 +119,7 @@ TEST_P(URLTestWithJavaScript, ConstructorWithValidURL) {
             result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -139,8 +138,7 @@ TEST_P(URLTestWithJavaScript, ConstructorWithInvalidBase) {
   EXPECT_EQ("TypeError", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -159,8 +157,7 @@ TEST_P(URLTestWithJavaScript, ConstructorWithInvalidURL) {
   EXPECT_EQ("TypeError", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -188,8 +185,7 @@ TEST_P(URLTestWithJavaScript, CreateObjectURL) {
   EXPECT_TRUE(Value(result, ::testing::StartsWith("blob:")));
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 

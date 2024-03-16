@@ -221,8 +221,8 @@ HRESULT WASAPIAudioDevice::ActivateCompleted(
             supports_eac3_passthrough_ = hr == S_OK;
           }
         }  // audio_client_->GetMixFormat
-      }    // audio_client_->SetClientProperties
-    }      // audio_interface->QueryInterface
+      }  // audio_client_->SetClientProperties
+    }  // audio_interface->QueryInterface
   }
 
   audio_client_ = nullptr;

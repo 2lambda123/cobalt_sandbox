@@ -246,8 +246,8 @@ TEST_F(WASAPIAudioDeviceTest, CheckValuesReturned) {
         EXPECT_EQ(audio_device_->GetBitrate(),
                   (test_samples_per_sec * test_bits_per_sample));
       }  // for k
-    }    // for j
-  }      // for i
+    }  // for j
+  }  // for i
 }
 
 }  // namespace uwp

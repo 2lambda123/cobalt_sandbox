@@ -229,13 +229,13 @@ TEST(SbMemoryMapTest, CanChangeMemoryProtection) {
       SbMemoryMapFlags(kSbMemoryMapProtectRead | kSbMemoryMapProtectWrite),
   };
   SbMemoryMapFlags all_to_flags[] = {
-    SbMemoryMapFlags(kSbMemoryMapProtectReserved),
-    SbMemoryMapFlags(kSbMemoryMapProtectRead),
-    SbMemoryMapFlags(kSbMemoryMapProtectWrite),
-    SbMemoryMapFlags(kSbMemoryMapProtectRead | kSbMemoryMapProtectWrite),
+      SbMemoryMapFlags(kSbMemoryMapProtectReserved),
+      SbMemoryMapFlags(kSbMemoryMapProtectRead),
+      SbMemoryMapFlags(kSbMemoryMapProtectWrite),
+      SbMemoryMapFlags(kSbMemoryMapProtectRead | kSbMemoryMapProtectWrite),
 #if SB_CAN(MAP_EXECUTABLE_MEMORY)
-    SbMemoryMapFlags(kSbMemoryMapProtectExec),
-    SbMemoryMapFlags(kSbMemoryMapProtectRead | kSbMemoryMapProtectExec),
+      SbMemoryMapFlags(kSbMemoryMapProtectExec),
+      SbMemoryMapFlags(kSbMemoryMapProtectRead | kSbMemoryMapProtectExec),
 #endif
   };
 

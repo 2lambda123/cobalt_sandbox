@@ -59,8 +59,8 @@ uint64_t ComputeSlotSize(
       base::ComputeDirectorySize(base::FilePath(installation_path.data()));
   LOG(INFO) << "ComputeSlotSize: slot_size=" << slot_size;
   if (slot_size <= 0) {
-    LOG(WARNING) << "ComputeSlotSize: "
-                 << "Failed to compute slot " << index << " size";
+    LOG(WARNING) << "ComputeSlotSize: " << "Failed to compute slot " << index
+                 << " size";
     return 0;
   }
   return slot_size;
@@ -362,14 +362,12 @@ bool CobaltSkipUpdate(
     uint64_t min_free_space_bytes,
     int64_t free_space_bytes,
     uint64_t installation_cleanup_size) {
-  LOG(INFO) << "CobaltSkipUpdate: "
-            << " min_free_space_bytes=" << min_free_space_bytes
-            << " free_space_bytes=" << free_space_bytes
+  LOG(INFO) << "CobaltSkipUpdate: " << " min_free_space_bytes="
+            << min_free_space_bytes << " free_space_bytes=" << free_space_bytes
             << " installation_cleanup_size=" << installation_cleanup_size;
 
   if (free_space_bytes < 0) {
-    LOG(WARNING) << "CobaltSkipUpdate: "
-                 << "Unable to determine free space";
+    LOG(WARNING) << "CobaltSkipUpdate: " << "Unable to determine free space";
     return false;
   }
 

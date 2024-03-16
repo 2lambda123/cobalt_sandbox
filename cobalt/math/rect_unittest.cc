@@ -51,15 +51,12 @@ TEST(RectTest, Contains) {
     int point_y;
     bool contained;
   } contains_cases[] = {
-    {0, 0, 10, 10, 0, 0, true},
-    {0, 0, 10, 10, 5, 5, true},
-    {0, 0, 10, 10, 9, 9, true},
-    {0, 0, 10, 10, 5, 10, false},
-    {0, 0, 10, 10, 10, 5, false},
-    {0, 0, 10, 10, -1, -1, false},
-    {0, 0, 10, 10, 50, 50, false},
+      {0, 0, 10, 10, 0, 0, true},    {0, 0, 10, 10, 5, 5, true},
+      {0, 0, 10, 10, 9, 9, true},    {0, 0, 10, 10, 5, 10, false},
+      {0, 0, 10, 10, 10, 5, false},  {0, 0, 10, 10, -1, -1, false},
+      {0, 0, 10, 10, 50, 50, false},
 #if defined(NDEBUG) && !defined(DCHECK_ALWAYS_ON)
-    {0, 0, -10, -10, 0, 0, false},
+      {0, 0, -10, -10, 0, 0, false},
 #endif
   };
   for (size_t i = 0; i < ARRAYSIZE_UNSAFE(contains_cases); ++i) {

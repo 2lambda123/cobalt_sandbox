@@ -182,10 +182,9 @@ bool ProgramTable::LoadSegments(File* elf_file) {
     Addr file_page_start = PAGE_START(file_start);
     Addr file_length = file_end - file_page_start;
 
-    SB_DLOG(INFO) << "Mapping segment: "
-                  << " file_page_start=" << file_page_start
-                  << " file_length=" << file_length << " seg_page_start=0x"
-                  << std::hex << seg_page_start;
+    SB_DLOG(INFO) << "Mapping segment: " << " file_page_start="
+                  << file_page_start << " file_length=" << file_length
+                  << " seg_page_start=0x" << std::hex << seg_page_start;
 
 #if SB_CAN(MAP_EXECUTABLE_MEMORY)
     if (file_length != 0) {

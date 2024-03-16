@@ -59,8 +59,7 @@ void WriteAttributes(const scoped_refptr<const Element>& element,
 
     *out_stream << " " << name;
     if (!value.empty()) {
-      *out_stream << "="
-                  << "\"" << value << "\"";
+      *out_stream << "=" << "\"" << value << "\"";
     }
   }
 }

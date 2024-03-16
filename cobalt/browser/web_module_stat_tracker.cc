@@ -391,17 +391,15 @@ void WebModuleStatTracker::EndCurrentEvent(base::TimeTicks event_end_time) {
   // This allows the Webdriver to query a single CVal to retrieve all of the
   // event's values.
   std::ostringstream oss;
-  oss << "{"
-      << "\"StartTime\":" << current_event_start_time_.ToInternalValue() << ", "
-      << "\"ProducedRenderTree\":"
+  oss << "{" << "\"StartTime\":" << current_event_start_time_.ToInternalValue()
+      << ", " << "\"ProducedRenderTree\":"
       << !current_event_render_tree_produced_time_.is_null() << ", "
       << "\"CntDomEventListeners\":"
       << dom::GlobalStats::GetInstance()->GetNumEventListeners() << ", "
       << "\"CntDomNodes\":" << dom::GlobalStats::GetInstance()->GetNumNodes()
       << ", "
       << "\"CntDomHtmlElements\":" << dom_stat_tracker_->EventCountHtmlElement()
-      << ", "
-      << "\"CntDomDocumentHtmlElements\":"
+      << ", " << "\"CntDomDocumentHtmlElements\":"
       << dom_stat_tracker_->EventCountHtmlElementDocument() << ", "
       << "\"CntDomHtmlElementsCreated\":"
       << dom_stat_tracker_->event_count_html_element_created() << ", "
@@ -411,12 +409,10 @@ void WebModuleStatTracker::EndCurrentEvent(base::TimeTicks event_end_time) {
       << dom_stat_tracker_->event_count_update_computed_style() << ", "
       << "\"CntDomGenerateHtmlComputedStyle\":"
       << dom_stat_tracker_->event_count_generate_html_element_computed_style()
-      << ", "
-      << "\"CntDomGeneratePseudoComputedStyle\":"
+      << ", " << "\"CntDomGeneratePseudoComputedStyle\":"
       << dom_stat_tracker_->event_count_generate_pseudo_element_computed_style()
-      << ", "
-      << "\"CntLayoutBoxes\":" << layout_stat_tracker_->EventCountBox() << ", "
-      << "\"CntLayoutBoxesCreated\":"
+      << ", " << "\"CntLayoutBoxes\":" << layout_stat_tracker_->EventCountBox()
+      << ", " << "\"CntLayoutBoxesCreated\":"
       << layout_stat_tracker_->event_count_box_created() << ", "
       << "\"CntLayoutUpdateSize\":"
       << layout_stat_tracker_->event_count_update_size() << ", "
@@ -428,44 +424,37 @@ void WebModuleStatTracker::EndCurrentEvent(base::TimeTicks event_end_time) {
       << (event_end_time - current_event_start_time_).InMicroseconds() << ", "
       << "\"DurDomInjectEventUs\":"
       << stop_watch_durations_[kStopWatchTypeDispatchEvent].InMicroseconds()
-      << ", "
-      << "\"DurDomRunAnimationFrameCallbacksUs\":"
+      << ", " << "\"DurDomRunAnimationFrameCallbacksUs\":"
       << dom_stat_tracker_
              ->GetStopWatchTypeDuration(
                  dom::DomStatTracker::kStopWatchTypeRunAnimationFrameCallbacks)
              .InMicroseconds()
-      << ", "
-      << "\"DurDomUpdateComputedStyleUs\":"
+      << ", " << "\"DurDomUpdateComputedStyleUs\":"
       << dom_stat_tracker_
              ->GetStopWatchTypeDuration(
                  dom::DomStatTracker::kStopWatchTypeUpdateComputedStyle)
              .InMicroseconds()
-      << ", "
-      << "\"DurLayoutBoxTreeUs\":"
+      << ", " << "\"DurLayoutBoxTreeUs\":"
       << layout_stat_tracker_
              ->GetStopWatchTypeDuration(
                  layout::LayoutStatTracker::kStopWatchTypeLayoutBoxTree)
              .InMicroseconds()
-      << ", "
-      << "\"DurLayoutBoxTreeBoxGenerationUs\":"
+      << ", " << "\"DurLayoutBoxTreeBoxGenerationUs\":"
       << layout_stat_tracker_
              ->GetStopWatchTypeDuration(
                  layout::LayoutStatTracker::kStopWatchTypeBoxGeneration)
              .InMicroseconds()
-      << ", "
-      << "\"DurLayoutBoxTreeUpdateUsedSizesUs\":"
+      << ", " << "\"DurLayoutBoxTreeUpdateUsedSizesUs\":"
       << layout_stat_tracker_
              ->GetStopWatchTypeDuration(
                  layout::LayoutStatTracker::kStopWatchTypeUpdateUsedSizes)
              .InMicroseconds()
-      << ", "
-      << "\"DurLayoutRenderAndAnimateUs\":"
+      << ", " << "\"DurLayoutRenderAndAnimateUs\":"
       << layout_stat_tracker_
              ->GetStopWatchTypeDuration(
                  layout::LayoutStatTracker::kStopWatchTypeRenderAndAnimate)
              .InMicroseconds()
-      << ", "
-      << "\"DurRendererRasterizeUs\":"
+      << ", " << "\"DurRendererRasterizeUs\":"
       << renderer_rasterize_duration.InMicroseconds() << "}";
   event_stats->value_dictionary = oss.str();
 #endif  // ENABLE_WEBDRIVER

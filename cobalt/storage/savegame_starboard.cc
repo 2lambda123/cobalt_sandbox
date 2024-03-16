@@ -183,14 +183,12 @@ bool SavegameStarboard::MigrateFromFallback() {
 
   std::unique_ptr<starboard::StorageRecord> fallback_record;
   if (!EnsureRecord(&fallback_record, base::nullopt)) {
-    DLOG(WARNING) << __FUNCTION__ << ": "
-                  << "Failed to open default record.";
+    DLOG(WARNING) << __FUNCTION__ << ": " << "Failed to open default record.";
     return false;
   }
 
   if (!ReadRecord(&buffer, kMaxSaveGameSizeBytes, fallback_record)) {
-    DLOG(WARNING) << __FUNCTION__ << ": "
-                  << "Failed to read default record.";
+    DLOG(WARNING) << __FUNCTION__ << ": " << "Failed to read default record.";
     return false;
   }
 

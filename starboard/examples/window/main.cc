@@ -62,9 +62,8 @@ void SbEventHandle(const SbEvent* event) {
                    << std::hex << data->key << ", character=" << data->character
                    << ", modifiers=0x" << std::hex << data->key_modifiers
                    << ", location=" << std::dec << data->key_location
-                   << ", position="
-                   << "[ " << data->position.x << " , " << data->position.y
-                   << " ]";
+                   << ", position=" << "[ " << data->position.x << " , "
+                   << data->position.y << " ]";
 
       // Track which keys are currently pressed, from our perspective outside
       // of Starboard.  Print out the current state after each key event.
