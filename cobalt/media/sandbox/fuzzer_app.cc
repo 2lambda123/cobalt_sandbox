@@ -45,8 +45,8 @@ void FuzzerApp::RunFuzzingLoop() {
   for (int i = 0; i < number_of_iterations_; ++i) {
     for (FileEntries::iterator iter = file_entries_.begin();
          iter != file_entries_.end(); ++iter) {
-      LOG(INFO) << "Fuzzing \"" << iter->first << "\" "
-                << "with seed " << iter->second.fuzzer.seed();
+      LOG(INFO) << "Fuzzing \"" << iter->first << "\" " << "with seed "
+                << iter->second.fuzzer.seed();
 
       Fuzz(iter->first, iter->second.fuzzer.GetFuzzedContent());
       iter->second.fuzzer.AdvanceSeed();

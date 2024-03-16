@@ -61,8 +61,7 @@ std::string InputBuffer::ToString() const {
     SB_DCHECK(sample_type() == kSbMediaTypeVideo);
 
     ss << "codec: " << video_stream_info().codec << ", mime: '"
-       << video_stream_info().mime << "'"
-       << ", max_video_capabilities: '"
+       << video_stream_info().mime << "'" << ", max_video_capabilities: '"
        << video_stream_info().max_video_capabilities << "'\n";
     ss << video_stream_info().frame_width << " x "
        << video_stream_info().frame_height << '\n';

@@ -31,9 +31,10 @@ const char kOnCssWarningHelp[] = "If set to \"crash\", crashes on CSS warning.";
 
 std::string HelpMessage() {
   std::string help_message;
-  std::map<std::string, const char*> help_map {
+  std::map<std::string, const char*> help_map{
 #if !defined(COBALT_BUILD_TYPE_GOLD)
-    {kOnCssError, kOnCssErrorHelp}, {kOnCssWarning, kOnCssWarningHelp},
+      {kOnCssError, kOnCssErrorHelp},
+      {kOnCssWarning, kOnCssWarningHelp},
 #endif  // !defined(COBALT_BUILD_TYPE_GOLD)
   };
 

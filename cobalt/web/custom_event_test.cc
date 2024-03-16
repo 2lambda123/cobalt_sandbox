@@ -85,8 +85,7 @@ TEST_P(CustomEventTestWithJavaScript,
   EXPECT_EQ("rulez", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -104,8 +103,7 @@ TEST_P(CustomEventTestWithJavaScript, InitCustomEvent) {
   EXPECT_EQ("rulez", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 

@@ -136,8 +136,7 @@ TEST_P(BlobTestWithJavaScript, ConstructorWithArray) {
   EXPECT_EQ("[object Blob]", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -158,8 +157,7 @@ TEST_P(BlobTestWithJavaScript, ConstructorWithArrayType) {
   EXPECT_EQ("", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -179,8 +177,7 @@ TEST_P(BlobTestWithJavaScript, ConstructorWithBlobPropertyBag) {
   EXPECT_EQ("test/foo", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
@@ -198,8 +195,7 @@ TEST_P(BlobTestWithJavaScript, ConstructorWithArraySize) {
   EXPECT_EQ("6", result);
 
   if (!success) {
-    DLOG(ERROR) << "Failed to evaluate test: "
-                << "\"" << result << "\"";
+    DLOG(ERROR) << "Failed to evaluate test: " << "\"" << result << "\"";
   }
 }
 
