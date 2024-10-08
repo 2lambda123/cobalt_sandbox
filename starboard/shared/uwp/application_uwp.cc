@@ -716,8 +716,7 @@ ref class App sealed : public IFrameworkView {
         std::stringstream ss;
         ss << platformStringToString(
             Windows::Storage::ApplicationData::Current->LocalCacheFolder->Path);
-        ss << "\\"
-           << "" << command_line->GetSwitchValue(kLogPathSwitch);
+        ss << "\\" << "" << command_line->GetSwitchValue(kLogPathSwitch);
         std::string full_path_log_file = ss.str();
         shared::uwp::OpenLogFileWin32(full_path_log_file.c_str());
       } else {

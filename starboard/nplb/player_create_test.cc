@@ -325,20 +325,15 @@ TEST_F(SbPlayerTest, MultiPlayer) {
       kSbPlayerOutputModeDecodeToTexture, kSbPlayerOutputModePunchOut};
 
   constexpr SbMediaAudioCodec kAudioCodecs[] = {
-    kSbMediaAudioCodecNone,
+      kSbMediaAudioCodecNone,
 
-    kSbMediaAudioCodecAac,
-    kSbMediaAudioCodecAc3,
-    kSbMediaAudioCodecEac3,
-    kSbMediaAudioCodecOpus,
-    kSbMediaAudioCodecVorbis,
+      kSbMediaAudioCodecAac,  kSbMediaAudioCodecAc3,    kSbMediaAudioCodecEac3,
+      kSbMediaAudioCodecOpus, kSbMediaAudioCodecVorbis,
 #if SB_API_VERSION >= 14
-    kSbMediaAudioCodecMp3,
-    kSbMediaAudioCodecFlac,
-    kSbMediaAudioCodecPcm,
+      kSbMediaAudioCodecMp3,  kSbMediaAudioCodecFlac,   kSbMediaAudioCodecPcm,
 #endif  // SB_API_VERSION >= 14
 #if SB_API_VERSION >= 15
-    kSbMediaAudioCodecIamf,
+      kSbMediaAudioCodecIamf,
 #endif  // SB_API_VERSION >= 15
   };
 

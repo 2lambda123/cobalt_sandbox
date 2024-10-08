@@ -132,8 +132,7 @@ std::string ImfAttributesToString(IMFAttributes* type) {
 
       case MF_ATTRIBUTE_BLOB: {
         // Skip.
-        ss << "<BLOB>"
-           << "\n";
+        ss << "<BLOB>" << "\n";
         break;
       }
 

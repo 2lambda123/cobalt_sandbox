@@ -48,10 +48,10 @@ class URLFetcherFake : public net::URLFetcher {
   void SetUploadFilePath(
       const std::string& upload_content_type, const base::FilePath& file_path,
       uint64_t range_offset, uint64_t range_length,
-      scoped_refptr<base::TaskRunner> file_task_runner) override{};
+      scoped_refptr<base::TaskRunner> file_task_runner) override {};
   void SetUploadStreamFactory(
       const std::string& upload_content_type,
-      const CreateUploadStreamCallback& callback) override{};
+      const CreateUploadStreamCallback& callback) override {};
   void SetChunkedUpload(const std::string& upload_content_type) override;
   void AppendChunkToUpload(const std::string& data,
                            bool is_last_chunk) override;

@@ -1141,10 +1141,8 @@ void Box::DumpIndent(std::ostream* stream, int indent) const {
 }
 
 void Box::DumpProperties(std::ostream* stream) const {
-  *stream << "left=" << left() << " "
-          << "top=" << top() << " "
-          << "width=" << width() << " "
-          << "height=" << height() << " ";
+  *stream << "left=" << left() << " " << "top=" << top() << " "
+          << "width=" << width() << " " << "height=" << height() << " ";
 
   *stream << "margin=" << margin_insets_.ToString() << " ";
   *stream << "border_width=" << border_insets_.ToString() << " ";
